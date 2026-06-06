@@ -1,323 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio homepage of Isaac Darko, BSc ICT graduate focused on networking, telecommunications, IT support, cybersecurity/SOC readiness, and web development." />
+  <meta name="author" content="Isaac Darko" />
+  <title>Isaac Darko | ICT, Networking & IT Support Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-    <nav id="desktop-nav">
-      <div class="logo">Isaac Darko</div>
-      <div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#Projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-	    <li><a href="gallery.html">Gallery</a></li>
-	    <li><a href="form.html">Form Page</a></li>
-	
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Go to homepage">Isaac Darko</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-content">
+        <p class="eyebrow">BSc ICT Graduate • Networking & Telecommunications</p>
+        <h1>Reliable networking support, practical IT troubleshooting, and a focused path toward SOC analysis.</h1>
+        <p class="hero-text">
+          I am Isaac Darko, a Presbyterian University Ghana graduate with hands-on exposure to networking, IT support,
+          IP camera systems, access control troubleshooting, Windows Server management, VLANs, Hyper-V, and web-based
+          software development.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="about.html">Learn More About Me</a>
+          <a class="btn btn-secondary" href="./assets/resume.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+
+        <div class="hero-meta" aria-label="Professional focus areas">
+          <span>Networking</span>
+          <span>IT Support</span>
+          <span>SOC/Cybersecurity Aspirant</span>
+          <span>Web Development</span>
+        </div>
+      </div>
+
+      <aside class="hero-card" aria-label="Profile summary card">
+        <img src="./assets/profile-pic.jpg" alt="Isaac Darko profile picture" class="profile-photo" />
+        <div>
+          <h2>Isaac Darko</h2>
+          <p>Entry-level ICT, Networking & IT Support Professional</p>
+        </div>
+        <ul class="quick-list">
+          <li>BSc ICT, Networking & Telecommunications</li>
+          <li>Rock City Hotel Ghana Intern, 2024</li>
+          <li>Cisco Packet Tracer competent</li>
+          <li>Preparing for SOC, CCNA, CompTIA & IT Essentials certifications</li>
         </ul>
-      </div>  
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Isaac Darko</div>   
-       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#Projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-	    <li><a href="gallery.html" onclick="toggleMenu()">Gallery</a></li>
-	    <li><a href="form.html" onclick="toggleMenu()">Form Page</a></li>
-        </div>
-       </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic.jpg" alt="Isaac Darko profile picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">hello i'm</p>
-            <h1 class="title">Isaac Darko</h1>
-            <p class="section__text__p2">Network Engineer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/resume.pdf')">
-                    download cv
-                </button>
-                
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My linkedin profile" 
-                class="icon" onclick="location.href='https://www.linkedin.com/in/isaac-darko-45313119a'">
-                
-                <img src="./assets/Github.jpg" alt="My Github profile" 
-                class="icon" onclick="location.href='https://github.com/DK199629'">
-            </div>
-        </div>
+      </aside>
     </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-        <div class="section__pic-container">
-            <img src="assets/about-pic.jpg" alt="profile picture"
-            class="about-pic">
-        </div>
-        <div class="about-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <img src="./assets/experience.png" alt="experience icon"
-                    class="icon">
-                    <h3>Experience</h3> 
-                    <p>2+ years<br />Network Engineer</p>
-                </div>
-                <div class="details-container">
-                    <img src="./assets/education.jpg" alt="education icon"
-                    class="icon">
-                    <h3>Education</h3> 
-                    <p>B.sc Bachelors Degree</p>
-                    
-                </div>
-            </div>
-            <div class="text-container">
-                <p>Hello, I’m Isaac Darko, 
-                    a network engineering student at Presbyterian University Ghana. 
-                    I’m passionate about network design, troubleshooting, and cybersecurity.
-                     Welcome to my portfolio.
 
-                    I have hands-on experience in configuring and maintaining network infrastructure. 
-                    Passionate about problem-solving and network security,
-                     aspiring to become a certified network engineer (CCNA, CompTIA Network+, CCie.).
-                      Experienced in managing routers, switches, and troubleshooting network issues. </p>
-            </div>
-        </div>
-    </div>
-    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" 
-    onclick="location.href='./#experience'" />
-    </section>
-    <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">SKILLS</h2>                    
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>Network Configuration <br>and Troubleshooting</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>Windows Server Management</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>Hardware and Software <br> Installation and Maintenance</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>Configuration of <br>Cisco switches <br>
-                                D-link switches<br>
-                                Access Points<br>
-                                and Routers</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>CCTv Camera Installation<br> and ip Camera configuration<br>
-                                Cable termination<br>
-                                Network Management and <br>System Administration</h3>
+    <section class="section compact-section">
+      <div class="section-heading centered-heading">
+        <p class="eyebrow">Professional Snapshot</p>
+        <h2>What I bring</h2>
+      </div>
 
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>Switching Technologies<br>
-                                VLAN's, VLAN trunking<br>
-                                Cable Management</h3> 
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">OTHERS</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>HTML</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>CSS</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>JAVASCRIPT</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>MYSQL</h3>
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>PHP</h3>
+      <div class="snapshot-grid">
+        <article class="snapshot-card">
+          <h3>Networking Foundation</h3>
+          <p>Switches, routers, access points, cabling, VLANs, Cisco Packet Tracer, and troubleshooting.</p>
+        </article>
+        <article class="snapshot-card">
+          <h3>IT Support Ability</h3>
+          <p>Windows installation, hardware/software troubleshooting, driver issues, and user support.</p>
+        </article>
+        <article class="snapshot-card">
+          <h3>Security Direction</h3>
+          <p>Preparing for SOC-related exams while strengthening network security and incident response knowledge.</p>
+        </article>
+      </div>
+    </section>
 
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience icon"
-                            class="icon" />
-                            <div>
-                                <h3>VISUAL BASIC</h3> 
-                            <P>Experienced</P>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
+    <section class="section alt-section">
+      <div class="section-heading">
+        <p class="eyebrow">Featured Project</p>
+        <h2>Blockchain-Driven AI-Assisted Personalized Rental Service</h2>
+      </div>
+
+      <article class="project-card">
+        <div class="project-image-wrap">
+          <img src="./assets/project-1.png" alt="Blockchain-driven AI-assisted personalized rental service project" class="project-img" />
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" 
-    onclick="location.href='./#Projects'" />
-    </section>
-    <section id="Projects">
-        <P class="section__text__p1">Browse My Recent</P>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.png" alt="project-1"
-                    class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">project one</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project btn" onclick="location.
-                    href='https://sites.google.com/view/dksnetworkhub'">Github
-                    </button>
-                    
-                    <button class="btn btn-color-2 project btn" onclick="location.
-                    href='https://sites.google.com/view/dksnetworkhub'">Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.png" alt="project-1"
-                    class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">project Two</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project btn" onclick="location.
-                    href='https://sites.google.com/view/dksnetworkhub'">Github
-                    </button>
-                    
-                    <button class="btn btn-color-2 project btn" onclick="location.
-                    href='https://sites.google.com/view/dksnetworkhub'">Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/project-1.png" alt="project-1"
-                    class="project-img" />
-                </div>
-                <h2 class="experience-sub-title project-title">project Three</h2>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project btn" onclick="location.
-                    href='https://sites.google.com/view/dksnetworkhub'">Github
-                    </button>
-                    
-                    <button class="btn btn-color-2 project btn" onclick="location.
-                    href='https://sites.google.com/view/dksnetworkhub'">Live Demo
-                    </button>
-                </div>
-            </div></div>
+        <div class="project-content">
+          <p class="project-label">Final Year Project • Completed Web-Based System</p>
+          <h3>Personalized rental platform with AI-assisted matching</h3>
+          <p>
+            A completed web-based rental service designed to improve how tenants discover suitable rental spaces and how
+            landlords manage property listings. The project combined personalized AI-assisted recommendation ideas with a
+            blockchain-driven concept to support trust, transparency, and better rental record handling.
+          </p>
+          <ul class="project-points">
+            <li>Tenant and landlord-focused platform concept</li>
+            <li>Property browsing, search, and recommendation support</li>
+            <li>AI-assisted matching for rental decisions</li>
+            <li>Research-driven final-year academic implementation</li>
+          </ul>
+          <div class="project-actions">
+            <a class="btn btn-primary" href="contact.html">Contact Me</a>
+            <a class="btn btn-secondary" href="https://github.com/DK199629" target="_blank" rel="noopener">GitHub Profile</a>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" 
-    onclick="location.href='./#projects'" />
+      </article>
     </section>
-    <section id="contact">
-        <p class="section__text__p1">Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="Contact-info-upper-container">
-            <div class="Contact-info-container">
-                <img src="./assets/email.png" alt="Email icon"
-                class="icon contact-icon email-icon" />
-                <p><a href="mailto:darkoisaac324@gmail.com">darkoisaac324@gmail.com</a></p>
-            </div>
-            <div class="Contact-info-container">
-                <img src="./assets/linkedin.png" alt="Linkedin icon"
-                class="icon contact-icon" />
-                <p><a href="https://www.linkedin.com/in/isaac-darko-45313119a">Linkedin</a></p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#Projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>copyright &#169; 2025 Isaac Darko. All Rights Reserved.</p>
-    </footer>
-  <script src="script.js"></script> 
-  
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Isaac Darko. All Rights Reserved.</p>
+    <a href="contact.html">Get in touch</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

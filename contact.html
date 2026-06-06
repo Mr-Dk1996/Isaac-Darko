@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Isaac Darko for ICT, networking, IT support, cybersecurity trainee roles, web projects, and collaboration." />
+  <meta name="author" content="Isaac Darko" />
+  <title>Contact | Isaac Darko</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Main navigation">
+      <a class="logo" href="index.html" aria-label="Go to homepage">Isaac Darko</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero section">
+      <p class="eyebrow">Contact</p>
+      <h1>Available for entry-level ICT, networking, IT support, and SOC trainee opportunities.</h1>
+      <p>
+        Reach out for job opportunities, internship-to-work opportunities, IT support roles, networking roles, web
+        projects, or collaboration.
+      </p>
+    </section>
+
+    <section class="section contact-section">
+      <div class="contact-grid">
+        <div class="contact-info-card">
+          <h2>Contact Information</h2>
+          <p>You can reach me directly through email, phone, WhatsApp, LinkedIn, or GitHub.</p>
+
+          <div class="contact-list">
+            <a href="mailto:darkoisaac324@gmail.com">darkoisaac324@gmail.com</a>
+            <a href="tel:+233592009843">+233 59 200 9843</a>
+            <a href="https://wa.me/233592009843" target="_blank" rel="noopener">WhatsApp: +233 59 200 9843</a>
+            <a href="https://www.linkedin.com/in/isaac-darko-45313119a" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://github.com/DK199629" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="contact-form">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden-field">
+            <label>Do not fill this out: <input name="bot-field" /></label>
+          </p>
+
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="How can I help?" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Isaac Darko. All Rights Reserved.</p>
+    <a href="index.html">Back home</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

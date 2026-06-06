@@ -1,20 +1,23 @@
-function toggleMenu() {
-    const menu = document.querySelector(".menu-links");
-    const icon = document.querySelector(".hamburger-icon");
-    menu.classList.toggle("open");
-    icon.classList.toggle("open");
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const navLinks = document.getElementById("navLinks");
+const year = document.getElementById("year");
+
+if (year) {
+  year.textContent = new Date().getFullYear();
 }
 
-// script.js
-document.querySelectorAll('.gallery-item img').forEach(image => {
-    image.addEventListener('click', () => {
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
-        overlay.innerHTML = `<img src="${image.src}" alt="${image.alt}" />`;
-        document.body.appendChild(overlay);
+if (hamburgerBtn && navLinks) {
+  hamburgerBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    hamburgerBtn.classList.toggle("open", isOpen);
+    hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
+  });
 
-        overlay.addEventListener('click', () => {
-            overlay.remove();
-        });
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      hamburgerBtn.classList.remove("open");
+      hamburgerBtn.setAttribute("aria-expanded", "false");
     });
-});
+  });
+}
